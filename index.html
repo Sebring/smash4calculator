@@ -1,0 +1,82 @@
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cash/2.3.7/cash.min.js"></script>
+<style>
+body {
+	margin: 2em;
+	background-color: white;
+	font-family: sans-serif;
+}
+.container {
+	display: flex;
+	padding: 2em;
+	background-color: gainsboro;
+	flex-flow: column nowrap;
+	border: 1px solid black;
+}
+form {
+	display: flex;
+	flex-flow: row wrap
+}
+select, input, option {
+	width: 100px;
+	height: 30px;
+}
+label {
+	display: block;
+	width: 80px;
+	line-height: 30px;
+}
+.data {
+	display: flex;
+	flex-flow: row wrap;
+}
+.data table {
+	border: 1px solid black;
+	padding: 4px;
+	margin: 4px;
+	background-color: white;
+	text-align: center;
+	width: 150px;
+}
+.data table:hover {
+	border-width: 2px;
+	padding: 3px;
+}
+td {
+	background-color: thistle;
+}
+td.green, table.green {
+	background-color: yellowgreen;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<form>
+			<div>
+				<label>Gold</label>
+				<input class="gold" type="text" />
+			</div>
+			<div>
+				<label>Cards</label>
+				<input class="avail_cards" type="text" />
+			</div>
+			<div>
+				<label>Level</label>
+				<input class="level" type="text" />
+			</div>
+			<div>
+				<label>Type</label>
+				<select class="type">
+					<option value="0">Common</option>
+					<option value="2">Rare</option>
+					<option value="4">Epic</option>
+				</select>
+			</div>
+		</form>
+		<div class="data"></div>
+	</div>
+	<script src="src/smash4.js"></script>
+</body>
+</html>
